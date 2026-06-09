@@ -18,3 +18,21 @@ export const getInputElementById = (id: string): HTMLInputElement => {
   }
   return element as HTMLInputElement;
 };
+
+/**
+ * 引数を受け取った名前のDOM要素を生成する
+ * @param elementName 要素名
+ * @param textContent 要素のテキスト
+ * @returns HTMLElement
+ */
+export const createElement = (
+  elementName: string,
+  textContent?: string,
+): HTMLElement => {
+  const element = document.createElement(elementName);
+  if (typeof textContent !== "undefined"){
+    element.textContent = textContent;
+  }
+  
+  return element;
+};

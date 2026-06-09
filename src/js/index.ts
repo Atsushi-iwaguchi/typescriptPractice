@@ -1,5 +1,5 @@
 import "../css/index.css";
-import { getNewTodo, Todo } from "./todo";
+import { appendTodoList, getNewTodo, Todo } from "./todo";
 import { getElementById } from "./utils/dom";
 
 let todoList: Todo[] = [];
@@ -11,5 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
     todoList.push(getNewTodo());
 
     //todo一覧を表示する
+    appendTodoList(todoList);
   });
 });
